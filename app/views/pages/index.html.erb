@@ -7,7 +7,9 @@
                <h2 class="text-gray-600">Sign in for a consultation.</h2>
             </span>
             <br>
-            <%= link_to '<button type="button" class="bg-divgray rounded w-64 h-12 text-xl text-white">Sign in</button>'.html_safe, pages_signin_path %>
+            <%= button_to pages_signin_path, class: "bg-divgray rounded w-64 h-12 text-xl text-white" do %>
+                Sign in
+            <% end %>
          </div>
       </div>
     </body>
