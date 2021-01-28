@@ -1,0 +1,10 @@
+<h1>Cars#show</h1>
+<ul class="">
+    <li>model: <%= @car.model %></li>
+    <li>constructor: <%= @car.constructor %></li>
+    <li>year of manufacturing: <%= @car.year %></li>
+</ul>
+
+<br /> <%= link_to "Back", cars_path %> <br />
+<%= link_to "Edit", edit_car_path(@car.id) %><br />
+<%= link_to "Delete this car", car_path, method: :delete %>

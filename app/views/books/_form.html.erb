@@ -1,0 +1,21 @@
+<%= form_with(model: @book) do |form| %>
+    <ul class="pl-2 border-solid border-8 border-light-gray-500">
+        <li class="border">
+            <%= form.label :title %>
+            <%= form.text_field :title, class: "border border-black rounded-sm" %>
+        </li>
+        <li class="border">
+            <%= form.label :description %>
+            <%= form.text_field :description %>
+        </li>
+        <li class="border">
+            <%= form.label :author %>
+            <%= form.text_field :author %>
+        </li>
+        <li class="border">
+            <%= form.label :year %>
+            <%= form.text_field :year %>
+        </li><br />
+        <li class=""><%= form.submit class: "rounded-md bg-gray-300" %></li>
+    </ul>
+<% end %>

@@ -12,8 +12,10 @@
   </head>
 
   <body>
-    <%= render 'pages/header' %>
-     <%= yield %>
-    <%= render 'pages/footer' %>
+    <%#= render 'pages/header' %>
+    <div class="container mx-auto">
+      <%= yield %>
+    </div>
+    <%#= render 'pages/footer' %>
   </body>
 </html>

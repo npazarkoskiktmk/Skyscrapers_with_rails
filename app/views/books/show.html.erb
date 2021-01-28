@@ -1,0 +1,12 @@
+<ul class="pl-2 border-solid border-8 border-light-gray-500">
+    <li class="pb-1">Title: <%= @book.title %></li>
+    <li class="py-1">Desc: <%= @book.description %></li>
+    <li class="py-1">Author: <%= @book.author %></li>
+    <li class="pb-1">Year: <%= @book.year %></li>
+</ul>
+
+<div class="pt-6">
+    <%= link_to "Back", books_path , class: "rounded-md bg-gray-400" %><br />
+    <%= link_to "Edit", edit_book_path(@book.id) , class: "rounded-md bg-gray-400" %><br />
+    <%= link_to "Delete this book", book_path, method: :delete , class: "rounded-md bg-gray-400" %>
+</div>

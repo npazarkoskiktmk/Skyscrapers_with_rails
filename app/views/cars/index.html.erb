@@ -1,0 +1,16 @@
+<h1>Cars#index</h1>
+<%= notice %>
+<% @cars.each do |car| %>
+    <ul class="">
+        <h2> <%= link_to car_path(car.id) do %>
+            Car No. <%= car.id %>
+        <% end%>
+        </h2>
+        <li>model: <%= car.model %></li>
+        <li>constructor: <%= car.constructor %></li>
+        <li>year of manufacturing: <%= car.year %></li>
+    </ul>
+    <br />
+<% end %>
+
+<%= button_to "Create new car", new_car_path, method: :get %>
