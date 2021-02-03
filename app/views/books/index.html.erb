@@ -1,0 +1,22 @@
+<h1 class="pb-6 text-xl">Books:</h1>
+<%= notice %>
+<div>
+    <%= link_to "Add new book", new_book_path, class: "rounded-md bg-gray-400" %>
+    <%#= button_to "Add new book", new_book_path, method: :get, class: "rounded-md bg-gray-400" %>
+</div>
+<div>
+    <% @books.each do |book| %>
+        <div class="bg-gray-300 ">
+        <%= link_to book_path(book.id) do %>
+                <span class="mt-6 underline hover:text-blue-800">Book No. <%= book.id %></span>
+        <% end%>
+        </div>
+        <ul class="pl-2 border-solid border-8 border-light-gray-500">
+            <li>title: <%= book.title %></li>
+            <li>desc: <%= book.description %></li>
+            <li>author: <%= book.author %></li>
+            <li>year: <%= book.year %></li>
+        </ul>
+        <br />
+    <% end %>
+</div>

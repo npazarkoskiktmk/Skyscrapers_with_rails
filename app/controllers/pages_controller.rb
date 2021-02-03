@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-    @varijabla = 1
+    @varijabla = "TEST TEST"
   end
 
   def home

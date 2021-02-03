@@ -1,0 +1,22 @@
+<h1>cars#new</h1>
+
+<%= form_with(model: @car) do |form| %>
+
+    <ul class="">
+        <li class="">
+            <%= form.label :model %>
+            <%= form.text_field :model %>
+        </li>
+        <li class="">
+            <%= form.label :constructor %>
+            <%= form.text_field :constructor %>
+        </li>
+        <li class="">
+            <%= form.label :year %>
+            <%= form.text_field :year %>
+        </li>
+        <li class=""><%= form.submit %></li>
+    </ul>
+<% end %>
+<br />
+<%= link_to "Go back", cars_path %>
