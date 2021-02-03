@@ -9,4 +9,15 @@
     <%= link_to "Back", books_path , class: "rounded-md bg-gray-400" %><br />
     <%= link_to "Edit", edit_book_path(@book.id) , class: "rounded-md bg-gray-400" %><br />
     <%= link_to "Delete this book", book_path, method: :delete , class: "rounded-md bg-gray-400" %>
-</div>
+</div><br>
+
+<div>
+    <% @commentsArray.each do |comment| %>
+        <hr />
+        <%= comment %>
+    <% end %>
+    <br><br><%= link_to "Only my comments", book_path(@book.id, filter_comments: true), class: "rounded-md bg-gray-400"  %>
+    <%= link_to "All comments", book_path(@book.id, filter_comments: false), class: "rounded-md bg-gray-400"  %><br>
+</div><br><br>
+<hr>
+<%= render 'feedbacks/form' %>

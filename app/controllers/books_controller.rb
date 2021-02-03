@@ -6,6 +6,21 @@ class BooksController < ApplicationController
   end
 
   def show
+    @commentsArray= Array.new
+    n=0
+    @p=params[:filter_comments]
+    @book.feedbacks.each do |feedback|
+      if params[:filter_comments] == "true"
+        if current_user.id == feedback.user_id
+         @commentsArray[n]=feedback.comment+ "  " + feedback.created_at.to_s + "  " + "\n  Commented by: " + User.find(feedback.user_id).username.to_s
+        end
+      else
+        @commentsArray[n]=feedback.comment+ "  " + feedback.created_at.to_s + "  " + "\n  Commented by: " + User.find(feedback.user_id).username.to_s
+      end
+         n+=1
+    end
+
+    return @book, @commentsArray, @p
   end
 
   def new

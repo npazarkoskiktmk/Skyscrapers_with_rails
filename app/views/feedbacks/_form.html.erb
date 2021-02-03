@@ -1,0 +1,5 @@
+<%= form_with(model: [@book, @book.feedbacks.build]) do |form| %>
+    <%= form.label :comment, class: "text-xl" %> <br >
+    <%= form.text_area :comment, class: "border-4 w-3/6" %> <br />
+    <%= form.submit "New Comment", class: "rounded-md bg-gray-400" %> <br />
+<% end %>
